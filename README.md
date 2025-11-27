@@ -27,7 +27,7 @@ flowchart TD
     C --> D[Crear nodo turtle_controller]
     D --> E[Crear publisher y cliente reset]
     E --> F[Configurar timer read_keyboard]
-    F --> G[Inicialización de bucle principal rclpy.spin]
+    F --> G[Bucle principal rclpy.spin]
 
     G --> H[Se ejecuta read_keyboard en todo momento]
     H --> I[_get_last_key obtiene la última tecla]
@@ -39,7 +39,7 @@ flowchart TD
 
     K --> N[Publicar Twist]
     L --> N
-    N--> R 
+    N--> G 
     M --> O[reset_turtle]
     O --> P[Llamar función draw_X]
     P --> Q[Ejecutar movimientos para dibujar la letra]
