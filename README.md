@@ -15,6 +15,9 @@ Una vez completados los pasos de la guía base, se diseñó e implementó un nod
 
 El nodo implementado interactúa directamente con el tópico `/turtle1/cmd_vel` para publicar las velocidades lineales y angulares requeridas por cada movimiento y lo envía al nodo `/turtle1`, encargado de la simulación. También se utiliza el servicio `/reset` de turtlesim para limpiar la pantalla y reposicionar la tortuga antes de iniciar el dibujo de cada letra.
 
+![image](https://github.com/jotavo21/Lab04_Robotica_2025_2/blob/main/imagenes/nodosytopicos.png)
+
+
 Este proceso permitió familiarizarse con el entorno y flujo de trabajo de ROS 2, la identificación de nodos y tópicos, así como la interacción entre distintos componentes dentro de un mismo entorno.
 
 ## Diagrama de flujo
