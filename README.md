@@ -22,26 +22,27 @@ Este proceso permitió familiarizarse con el entorno y flujo de trabajo de ROS 2
 ```mermaid
 flowchart TD
 
-    A[Inicio del programa] --> B[Inicializar ROS2<br/>rclpy.init()]
+    A[Inicio del programa] --> B[Inicializar ROS2 y rclpy]
     B --> C[Inicializar curses]
     C --> D[Crear nodo TurtleTeleop]
-    D --> E[Crear publisher y cliente /reset]
-    E --> F[Configurar timer para read_keyboard()]
-    F --> G[[Bucle principal rclpy.spin()]]
+    D --> E[Crear publisher y cliente reset]
+    E --> F[Configurar timer read_keyboard]
+    F --> G[Bucle principal rclpy.spin]
 
-    G --> H[Timer ejecuta read_keyboard()]
-    H --> I[_get_last_key(): leer última tecla]
+    G --> H[Timer ejecuta read_keyboard]
+    H --> I[_get_last_key obtiene la última tecla]
 
     I --> J{Tipo de tecla}
     J --> K[Sin tecla: enviar Twist 0,0]
     J --> L[Tecla de flecha]
     J --> M[Tecla de letra]
 
-    L --> N[Asignar Twist manual y publicarlo]
-    K --> N
+    K --> N[Publicar Twist]
+    L --> N
 
-    M --> O[Llamar función draw_X()]
-    O --> P[reset_turtle()]
-    P --> Q[Ejecutar movimientos primitivos<br/>con _drain_keys()]
-    Q --> G
+    M --> O[Llamar función draw_X]
+    O --> P[reset_turtle]
+    P --> Q[Ejecutar movimientos primitivos]
+    Q --> R[_drain_keys descarta teclas]
+    R --> G
 ```
