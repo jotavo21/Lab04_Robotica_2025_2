@@ -42,7 +42,7 @@ flowchart TD
     N--> G 
     M --> O[reset_turtle]
     O --> P[Llamar función draw_X]
-    P --> Q[Ejecutar movimientos para dibujar la letra]
+    P --> Q[Ejecutar movimientos para dibujar la letra (Publicar twists correspondientes)]
     Q --> R[_drain_keys elimina las teclas del buffer]
     R --> G
 ```
