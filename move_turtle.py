@@ -183,7 +183,6 @@ class TurtleTeleop(Node):
             self.move_forward(1.5)      
             self.move_backward(1.5)
             self.turn_left(1.03)
-
     def draw_O(self):
         self.get_logger().info("Dibujando O")
         self._drain_keys()
@@ -191,8 +190,12 @@ class TurtleTeleop(Node):
         self.turn_left(1)
         msg = Twist()
         msg.angular.z = 1.0
-        for _ in range(4):
-            self.move_forward(1.8)
+        for _ in range(2):
+            self.move_forward(2)
+            self.turn_left(1.1)
+            self.move_forward(1.7)
+            self.turn_left(1.1)
+            
     def draw_G(self):
         self.get_logger().info("Dibujando G")
         self._drain_keys()
