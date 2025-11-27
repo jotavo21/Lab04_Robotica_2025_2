@@ -35,14 +35,14 @@ flowchart TD
     I --> J{Tipo de tecla}
     J --> K[Sin tecla: enviar Twist 0,0]
     J --> L[Tecla de flecha]
-    J --> M[Tecla de letra]
+    J --> M[Tecla de letra X]
 
     K --> N[Publicar Twist]
     L --> N
-
-    M --> O[Llamar función draw_X]
-    O --> P[reset_turtle]
-    P --> Q[Ejecutar movimientos primitivos]
-    Q --> R[_drain_keys descarta teclas]
+    N--> R 
+    M --> O[reset_turtle]
+    O --> P[Llamar función draw_X]
+    P --> Q[Ejecutar movimientos para dibujar la letra]
+    Q --> R[_drain_keys elimina las teclas del buffer]
     R --> G
 ```
