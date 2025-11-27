@@ -24,12 +24,12 @@ flowchart TD
 
     A[Inicio del programa] --> B[Inicializar ROS2 y rclpy]
     B --> C[Inicializar curses]
-    C --> D[Crear nodo TurtleTeleop]
+    C --> D[Crear nodo turtle_controller]
     D --> E[Crear publisher y cliente reset]
     E --> F[Configurar timer read_keyboard]
-    F --> G[Bucle principal rclpy.spin]
+    F --> G[Inicialización de bucle principal rclpy.spin]
 
-    G --> H[Timer ejecuta read_keyboard]
+    G --> H[Se ejecuta read_keyboard en todo momento]
     H --> I[_get_last_key obtiene la última tecla]
 
     I --> J{Tipo de tecla}
