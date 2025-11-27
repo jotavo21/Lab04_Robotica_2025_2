@@ -39,7 +39,7 @@ flowchart TD
 
     K --> N[Publicar Twist]
     L --> N
-    N--> G 
+    N --> G 
     M --> O[reset_turtle]
     O --> P[Llamar función draw_X]
     P --> Q[Ejecutar movimientos para dibujar la letra (Publicar twists correspondientes)]
