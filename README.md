@@ -358,5 +358,4 @@ Primero se llama a _get_last_key para obtener la última tecla registrada desde 
 Después, la función revisa si la tecla coincide con alguna de las letras configuradas para dibujo. Si se pulsa una letra válida se llama a la función draw_X correspondiente.
 
 ## Video de Desarrollo e Implementaciòn
-
-https://youtu.be/PQpmsUW5etU
+[![Video 1](https://img.https://youtu.be/PQpmsUW5etU/0.jpg)](https://youtu.be/PQpmsUW5etU)
