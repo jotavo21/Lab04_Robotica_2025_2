@@ -1,0 +1,37 @@
+[0.373s] Invoking command in '/home/jotavo21/ros_humble/turtlesim_ws/src/my_turtle_controller': PYTHONPATH=/home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_turtle_controller build --build-base /home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/build install --record /home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/install.log --single-version-externally-managed install_data
+[0.501s] running egg_info
+[0.501s] creating ../../build/my_turtle_controller/my_turtle_controller.egg-info
+[0.501s] writing ../../build/my_turtle_controller/my_turtle_controller.egg-info/PKG-INFO
+[0.502s] writing dependency_links to ../../build/my_turtle_controller/my_turtle_controller.egg-info/dependency_links.txt
+[0.502s] writing entry points to ../../build/my_turtle_controller/my_turtle_controller.egg-info/entry_points.txt
+[0.502s] writing requirements to ../../build/my_turtle_controller/my_turtle_controller.egg-info/requires.txt
+[0.502s] writing top-level names to ../../build/my_turtle_controller/my_turtle_controller.egg-info/top_level.txt
+[0.502s] writing manifest file '../../build/my_turtle_controller/my_turtle_controller.egg-info/SOURCES.txt'
+[0.502s] reading manifest file '../../build/my_turtle_controller/my_turtle_controller.egg-info/SOURCES.txt'
+[0.503s] writing manifest file '../../build/my_turtle_controller/my_turtle_controller.egg-info/SOURCES.txt'
+[0.503s] running build
+[0.503s] running build_py
+[0.503s] creating /home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/build
+[0.503s] creating /home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/build/lib
+[0.503s] creating /home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/build/lib/my_turtle_controller
+[0.504s] copying my_turtle_controller/__init__.py -> /home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/build/lib/my_turtle_controller
+[0.504s] copying my_turtle_controller/move_turtle.py -> /home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/build/lib/my_turtle_controller
+[0.504s] running install
+[0.504s] running install_lib
+[0.504s] creating /home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/lib/python3.10/site-packages/my_turtle_controller
+[0.504s] copying /home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/build/lib/my_turtle_controller/__init__.py -> /home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/lib/python3.10/site-packages/my_turtle_controller
+[0.504s] copying /home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/build/lib/my_turtle_controller/move_turtle.py -> /home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/lib/python3.10/site-packages/my_turtle_controller
+[0.504s] byte-compiling /home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/lib/python3.10/site-packages/my_turtle_controller/__init__.py to __init__.cpython-310.pyc
+[0.505s] byte-compiling /home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/lib/python3.10/site-packages/my_turtle_controller/move_turtle.py to move_turtle.cpython-310.pyc
+[0.505s] running install_data
+[0.505s] creating /home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/share/ament_index
+[0.505s] creating /home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/share/ament_index/resource_index
+[0.505s] creating /home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/share/ament_index/resource_index/packages
+[0.505s] copying resource/my_turtle_controller -> /home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/share/ament_index/resource_index/packages
+[0.505s] copying package.xml -> /home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/share/my_turtle_controller
+[0.505s] running install_egg_info
+[0.505s] Copying ../../build/my_turtle_controller/my_turtle_controller.egg-info to /home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/lib/python3.10/site-packages/my_turtle_controller-0.0.0-py3.10.egg-info
+[0.506s] running install_scripts
+[0.517s] Installing move_turtle script to /home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/lib/my_turtle_controller
+[0.518s] writing list of installed files to '/home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/install.log'
+[0.534s] Invoked command in '/home/jotavo21/ros_humble/turtlesim_ws/src/my_turtle_controller' returned '0': PYTHONPATH=/home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jotavo21/ros_humble/turtlesim_ws/install/my_turtle_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_turtle_controller build --build-base /home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/build install --record /home/jotavo21/ros_humble/turtlesim_ws/build/my_turtle_controller/install.log --single-version-externally-managed install_data
