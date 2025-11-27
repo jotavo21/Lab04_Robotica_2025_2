@@ -19,74 +19,29 @@ Este proceso permitió familiarizarse con el entorno y flujo de trabajo de ROS 2
 
 ## Diagrama de flujo
 
+```mermaid
 flowchart TD
 
-    %% NODO PRINCIPAL
     A[Inicio del programa] --> B[Inicializar ROS2<br/>rclpy.init()]
-    B --> C[Inicializar curses<br/>initscr(), noecho(), keypad(True)]
-    C --> D[Crear nodo<br/>TurtleTeleop]
-    D --> E[Crear publisher /turtle1/cmd_vel<br/>y cliente /reset]
-    E --> F[Configurar timer<br/>read_keyboard() cada 0.1 s]
-    F --> G[[Bucle principal<br/>rclpy.spin(node)]]
+    B --> C[Inicializar curses]
+    C --> D[Crear nodo TurtleTeleop]
+    D --> E[Crear publisher y cliente /reset]
+    E --> F[Configurar timer para read_keyboard()]
+    F --> G[[Bucle principal rclpy.spin()]]
 
-    %% TIMER DE LECTURA
-    G --> H[Timer dispara<br/>read_keyboard()]
-    H --> I[_get_last_key():<br/>leer todas las teclas<br/>y quedarse con la última]
+    G --> H[Timer ejecuta read_keyboard()]
+    H --> I[_get_last_key(): leer última tecla]
 
-    %% DECISIÓN DE TECLA
-    I --> J{¿Tecla válida?}
-    J --> K[No hay tecla<br/>key == -1]
+    I --> J{Tipo de tecla}
+    J --> K[Sin tecla: enviar Twist 0,0]
     J --> L[Tecla de flecha]
-    J --> M[Tecla de letra<br/>I,S,R,P,J,E,O,G]
+    J --> M[Tecla de letra]
 
-    %% SIN TECLA
-    K --> K1[Construir Twist con<br/>velocidades 0,0]
-    K1 --> N[Publicar Twist<br/>/turtle1/cmd_vel]
-    N --> G
+    L --> N[Asignar Twist manual y publicarlo]
+    K --> N
 
-    %% FLECHAS
-    L --> L1[Asignar velocidades:<br/>↑/↓ -> linear.x<br/>←/→ -> angular.z]
-    L1 --> N
-
-    %% LETRAS
-    M --> N
-    M --> O{¿Qué letra es?}
-    O --> OI[Llamar draw_I()]
-    O --> OS[Llamar draw_S()]
-    O --> OR[Llamar draw_R()]
-    O --> OP[Llamar draw_P()]
-    O --> OJ[Llamar draw_J()]
-    O --> OE[Llamar draw_E()]
-    O --> OO[Llamar draw_O()]
-    O --> OG[Llamar draw_G()]
-
-    %% DIBUJO DE LETRAS (GENÉRICO)
-    subgraph DIBUJO_AUTOMÁTICO [Función draw_X()]
-        direction TB
-        P1[Log: 'Dibujando X'] --> P2[_drain_keys():<br/>vaciar buffer de teclado]
-        P2 --> P3[Llamar reset_turtle():<br/>servicio /reset + pausa]
-        P3 --> P4[Ejecutar secuencia<br/>de movimientos primitivos]
-
-        subgraph MOV_PRIMITIVOS [Movimientos primitivos]
-            direction TB
-            Q1[move_forward(t) /<br/>move_backward(t) /<br/>turn_left(t) / turn_right(t)]
-            Q1 --> Q2[Construir Twist<br/>con velocidad fija]
-            Q2 --> Q3[while tiempo < t]
-            Q3 --> Q4[Publicar Twist]
-            Q4 --> Q5[_drain_keys():<br/>descartar teclas mientras se mueve]
-            Q5 --> Q6[dormir 0.01 s]
-            Q6 --> Q3
-            Q3 --> Q7[Al terminar:<br/>llamar stop()]
-        end
-    end
-
-    OI --> P1
-    OS --> P1
-    OR --> P1
-    OP --> P1
-    OJ --> P1
-    OE --> P1
-    OO --> P1
-    OG --> P1
-
-    P4 --> G
+    M --> O[Llamar función draw_X()]
+    O --> P[reset_turtle()]
+    P --> Q[Ejecutar movimientos primitivos<br/>con _drain_keys()]
+    Q --> G
+```
