@@ -1,1 +1,1 @@
-# Lab04_Robotica_2025_2
+# Laboratorio No. 04 - 2025-II - Robótica de Desarrollo, Intro a ROS 2 Humble - Turtlesim
