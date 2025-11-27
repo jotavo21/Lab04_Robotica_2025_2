@@ -356,3 +356,7 @@ La función read_keyboard es ejecutada periódicamente. En cada llamada lee la �
 Primero se llama a _get_last_key para obtener la última tecla registrada desde el ciclo anterior del temporizador. Si la tecla corresponde a una flecha, se transmite el mensaje Twist correspondiente para generar traslación o rotación. Si no hay una tecla válida (o no se ha pulsado ninguna), se envía un mensaje con velocidades nulas, manteniendo la tortuga en reposo. Este mensaje se publica inmediatamente en el tópico /turtle1/cmd_vel.
 
 Después, la función revisa si la tecla coincide con alguna de las letras configuradas para dibujo. Si se pulsa una letra válida se llama a la función draw_X correspondiente.
+
+## Video de Desarrollo e Implementaciòn
+
+https://youtu.be/PQpmsUW5etU
